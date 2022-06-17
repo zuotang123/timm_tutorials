@@ -12,7 +12,6 @@ print(h, w)
 
 # We can convert this into a tensor, and transpose the channels into the format that PyTorch expects:
 np_image = np.array(image, dtype=np.float32)
-print(np_image.shape)
 image = torch.as_tensor(np_image).transpose(2, 0)[None]
 print(image.shape)
 
